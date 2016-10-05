@@ -117,7 +117,7 @@ if args.verbose:
 
 downloaded_slides_str = ' '.join(downloaded_slides)
 try:
-    cmd = 'convert {} -quality 100 {}'.format(downloaded_slides_str,  output_path)
+    cmd = 'magick {} -quality 100 {}'.format(downloaded_slides_str,  output_path)
     subprocess.call(cmd, shell=True)
 except Exception as e:
     sys.exit('Could not convert slides to PDF. {}'.format(str(i), e))
